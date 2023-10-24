@@ -8,25 +8,34 @@
     display:flex;
     border: 1px solid black;
     justify-content : space-between;
+    padding:10px;
 }
-.logoImg {
+.logo {
     width:130px;
     height:80px;
 }
 
-.nav-link > ul{
+.nav-items {
+    display:flex;
+    align-items : center
+}
+.nav-items > ul{
     display:flex;
     list-style:none;
 }
-.nav-link > ul > li {
-    padding:10px 10px;
-    margin:10px 0px;
+.nav-items > ul > li {
+    font-size:24px;
+    padding:0px 10px;
+  
 }
 
 
 .container{
+padding:20px;    
+}
+.card-container{
     border:1px solid black;
-    
+    padding:20px;
 }
 .food-img{
     height: 80px;
