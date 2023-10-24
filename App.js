@@ -27,16 +27,10 @@ const RestaurantCard = () => {
     return (
         <div className="rest-card">
             <img className="food-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D" />
-                <div>
-                <div className="card-info">
-                    <div className="card-title">
-                        <h5>Apple</h5>
-                    </div>
-                    <div className="card-price">
-                        <h5>Rs. 100</h5>
-                    </div>
-                </div>
-            </div>
+            <h3>Mehgna Foods</h3>
+            <h4>Biryani , North Indian , Asian</h4>
+            <h4>4.5 Start</h4>
+            <h4>38 Mints</h4>
         </div>
     )
 }
@@ -48,7 +42,18 @@ const Body = () => {
                 Search
             </div>
             <div className="cards-container">
-
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
             </div>
         </div>
     );
