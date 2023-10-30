@@ -1,10 +1,14 @@
 import RestaurantCard from "./RestaurantCard";
 import objData from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
 
     const [filterData, setFilterData] = useState(objData)
+
+    useEffect(() => {
+        console.log("UseEffect Called")
+    }, [])
     const handleClick = () => {
         let filterCardData = objData.filter((item) => {
             // console.log(item?.info.avgRating)
