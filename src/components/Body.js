@@ -7,8 +7,16 @@ const Body = () => {
     const [filterData, setFilterData] = useState(objData)
 
     useEffect(() => {
-        console.log("UseEffect Called")
+        fetchData();
     }, [])
+
+    const fetchData = async () => {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2403305&lng=73.1305395&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const response = await data.json()
+        console.log(response)
+    }
+
+
     const handleClick = () => {
         let filterCardData = objData.filter((item) => {
             // console.log(item?.info.avgRating)
