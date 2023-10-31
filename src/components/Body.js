@@ -27,12 +27,8 @@ const Body = () => {
         setRestaurantData(filterCardData)
     }
 
-    //shimmer UI
-    if (restaurantData.length === 0) {
-        return <ShimmerUI />
-    }
 
-    return (
+    return restaurantData.length === 0 ? (<ShimmerUI />) : (
         <div className="body-container">
             <div className="search-container">
                 <button onClick={handleClick}> Top Rated Restaurant</button>
