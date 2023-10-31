@@ -71,3 +71,7 @@ width:100%;
     padding: 5px;
     background: #f0f0f0;
 }
+.loginBtn {
+    padding: 10px;
+    cursor: pointer;
+}
