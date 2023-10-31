@@ -1,5 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
+import ShimmerUI from "./ShimmerUI";
 
 const Body = () => {
 
@@ -25,6 +26,12 @@ const Body = () => {
         })
         setRestaurantData(filterCardData)
     }
+
+    //shimmer UI
+    if (restaurantData.length === 0) {
+        return <ShimmerUI />
+    }
+
     return (
         <div className="body-container">
             <div className="search-container">

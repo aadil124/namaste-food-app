@@ -56,3 +56,18 @@ width:100%;
     font-size:18px;
     padding:5px;
 }
+/* shimmerUI */
+
+.shimmerContainer {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmerCard {
+    height: 400px;
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    background: #f0f0f0;
+}
