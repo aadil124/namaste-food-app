@@ -5,6 +5,7 @@ import ShimmerUI from "./ShimmerUI";
 const Body = () => {
 
     const [restaurantData, setRestaurantData] = useState([])
+    const [searchText, setSearchText] = useState()
 
     useEffect(() => {
         fetchData();
@@ -20,17 +21,28 @@ const Body = () => {
 
 
     const handleClick = () => {
-        let filterCardData = objData.filter((item) => {
+        let filterCardData = restaurantData.filter((item) => {
             // console.log(item?.info.avgRating)
             return item?.info.avgRating > 3.8
         })
         setRestaurantData(filterCardData)
     }
 
+    const searchTextButton = () => {
+        let searchFilteredRestaurant = restaurantData.filter((item) => {
+            return item?.info.name.toLowerCase().includes(searchText.toLowerCase())
+        })
+        setRestaurantData(searchFilteredRestaurant)
+    }
+
 
     return restaurantData.length === 0 ? (<ShimmerUI />) : (
         <div className="body-container">
             <div className="search-container">
+                <div className="search_box">
+                    <input type="text" placeholder="Search Here..." value={searchText} onChange={(e) => searchText === "" ? setRestaurantData(restaurantData) : setSearchText(e.target.value)} />
+                    <button onClick={searchTextButton}> Search Restaurant</button>
+                </div>
                 <button onClick={handleClick}> Top Rated Restaurant</button>
             </div>
             <div className="cards-container">
