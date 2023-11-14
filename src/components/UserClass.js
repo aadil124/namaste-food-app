@@ -1,4 +1,5 @@
 import React from "react";
+
 class UserClass extends React.Component {
 
     constructor(props) {
@@ -8,11 +9,17 @@ class UserClass extends React.Component {
         this.state = {
             count: 0,
         }
+        console.log("child constructor")
+    }
+    componentDidMount() {
+        console.log("child component Did Mount")
     }
 
     render() {
         const { name, location } = this.props
         const { count, count2 } = this.state
+
+        console.log("child render")
         return (
             <div className="user_card">
                 <div className="user_items">
