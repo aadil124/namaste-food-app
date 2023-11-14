@@ -40,9 +40,9 @@ const Body = () => {
         setFilteredRestaurantData(searchFilteredRestaurant)
     }
 
+    if (listOfRestaurantData.length === null) return (<ShimmerUI />) 
 
-    return listOfRestaurantData.length === 0 ? (<ShimmerUI />) : (
-        <div className="body-container">
+    return (<div className="body-container">
             <div className="search-container">
                 <div className="search_box">
                     <input type="text" placeholder="Search Here..." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
