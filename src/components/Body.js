@@ -1,32 +1,15 @@
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
-import { LIST_RESTAURANT_URL } from "../utils/constant";
+import useListOfRestaurant from "../utils/useListOfRestaurant";
 
 const Body = () => {
-
-    const [listOfRestaurantData, setListOfRestaurantData] = useState([])
-    const [filteredRestaurantData, setFilteredRestaurantData] = useState([])
     const [searchText, setSearchText] = useState()
-
-    useEffect(() => {
-        fetchData();
-    }, [])
-
-    const fetchData = async () => {
-        const data = await fetch(LIST_RESTAURANT_URL)
-        const response = await data.json()
-        const restaurantCardData = response?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        // console.log(restaurantCardData[0].info)
-        setListOfRestaurantData(restaurantCardData)
-        setFilteredRestaurantData(restaurantCardData)
-    }
-
+    const { filteredRestaurantData, listOfRestaurantData, setFilteredRestaurantData, setListOfRestaurantData } = useListOfRestaurant();
 
     const handleClick = () => {
         let filterCardData = listOfRestaurantData.filter((item) => {
-            // console.log(item?.info.avgRating)
             return item?.info.avgRating > 3.8
         })
         setListOfRestaurantData(filterCardData)
