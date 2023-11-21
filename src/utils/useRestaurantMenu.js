@@ -4,7 +4,7 @@ import { REGULAR_MENU_URL } from "../utils/constant";
 
 const useRestaurantMenu = (resId) => {
 
-    console.log(resId)
+    // console.log(resId)
 
     const [resInfo, setResInfo] = useState(null)
 
