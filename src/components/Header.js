@@ -10,28 +10,29 @@ const Header = () => {
     // console.log(onlineStatus)
 
     return (
-        <div className="header">
-            <div className="logo-container">
+        <div className="flex justify-between p-2 bg-blue-100">
+
                 <Link to="/">
                 <img
-                    className="logo"
+                    className="w-56 rounded-full"
                     src={LOGO_URL}
                     alt="logo"
                 />
                 </Link>
 
-            </div>
-            <div className="nav-items">
-                <ul >
-                    <li>Online Status: {onlineStatus === true ? '✔' : '🛑'} </li>
-                    <li ><Link to="/">Home</Link></li>
-                    <li ><Link to="/about">About</Link></li>
-                    <li ><Link to="/contact">Contact us</Link></li>
-                    <li>cart</li>
+            <div className="flex items-center">
+                <ul className="flex m-2 px-3" >
+                    <li className="px-2 text-lg font-semibold">Online Status: {onlineStatus === true ? '✔' : '🛑'} </li>
+                    <li className="px-2 text-lg font-semibold" ><Link to="/">Home</Link></li>
+                    <li className="px-2 text-lg font-semibold"><Link to="/about">About</Link></li>
+                    <li className="px-2 text-lg font-semibold"><Link to="/contact">Contact us</Link></li>
+                    <li className="px-2 text-lg font-semibold">cart</li>
+
                 </ul>
-                <button className="loginBtn" onClick={() => {
+                <div className="px-2 text-lg font-semibold items-center">   <button className="rounded bg-gray-300 px-8 py-2" onClick={() => {
                     btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
-                }}>{btnName}</button>
+                }}>{btnName}</button></div>
+
             </div>
         </div>
     );
