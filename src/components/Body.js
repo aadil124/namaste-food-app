@@ -31,15 +31,15 @@ const Body = () => {
 
     if (listOfRestaurantData.length === null) return (<ShimmerUI />) 
 
-    return (<div className="body-container">
-            <div className="search-container">
-                <div className="search_box">
-                    <input type="text" placeholder="Search Here..." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-                    <button onClick={searchTextButton}> Search Restaurant</button>
-                </div>
-                <button onClick={handleClick}> Top Rated Restaurant</button>
+    return (<div className="m-2 p-3">
+        <div className="flex">
+            <div className="search_box my-2">
+                <input className="bg-gray-200 mx-2 px-3 py-2 " type="text" placeholder="Search Here..." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+                <button onClick={searchTextButton} className="px-3 py-2 bg-pink-200 rounded-md mx-2 font-semibold"> Search Restaurant</button>
+                <button onClick={handleClick} className="px-3 py-2 bg-pink-200 rounded-md font-semibold"> Top Rated Restaurant</button>
             </div>
-            <div className="cards-container">
+        </div>
+        <div className="cards-container flex flex-wrap">
                 {
                     filteredRestaurantData.map((restaurant) => {
                         return (
