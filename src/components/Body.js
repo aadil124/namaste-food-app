@@ -50,7 +50,7 @@ const Body = () => {
                         return (
                             <Link className="restaurantMenuLink" to={`/restaurantMenu/${restaurant.info.id}`} key={restaurant.info.id}>
                                 {
-                                    restaurant?.info?.promoted ? <PromotedRestaurantCard restaurant={restaurant} key={restaurant.info.id} /> : <RestaurantCard restaurant={restaurant} key={restaurant.info.id} />
+                                    restaurant?.info?.avgRating > 4 ? <PromotedRestaurantCard restaurant={restaurant} key={restaurant.info.id} /> : <RestaurantCard restaurant={restaurant} key={restaurant.info.id} />
                                 }
 
                             </Link>
