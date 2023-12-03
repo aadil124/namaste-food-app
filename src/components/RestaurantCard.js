@@ -16,7 +16,7 @@ const RestaurantCard = ({ restaurant }) => {
                     <h4 className="font-bold py-3  text-red-600">{avgRating} Stars</h4>
                 </div>
                 <div className="flex justify-between">
-                    <h4 className="font-bold py-3  text-blue-700">{sla.deliveryTime} Minutes</h4>
+                    <h4 className="font-bold py-3  text-blue-700">{sla.slaString}</h4>
                     <h3 className="font-bold py-3  text-fuchsia-700" >{areaName}</h3>
                 </div>
 
@@ -29,7 +29,7 @@ const RestaurantCard = ({ restaurant }) => {
 export const withPromotedCard = (RestaurantCard) => {
     return (props) => {
         // console.log(props.restaurant.info.aggregatedDiscountInfoV3.header)
-        console.log(props.restaurant.info)
+        // console.log(props.restaurant.info)
         return (
             <>
                 <label className="absolute bg-red-500 p-2 m-2 rounded-md text-yellow-300 font-medium">Best Seller</label>
