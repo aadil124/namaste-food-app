@@ -26,10 +26,10 @@ const Body = () => {
 
     const onlineStatus = useOnlineStatus()
     // console.log(withPromotedCard())
-    console.log(listOfRestaurantData)
+    // console.log(listOfRestaurantData)
 
     const PromotedRestaurantCard = withPromotedCard(RestaurantCard);
-    console.log(PromotedRestaurantCard)
+    // console.log(PromotedRestaurantCard)
 
     if (onlineStatus === false) return <h1>Looks like you're offline!! Please check your internet connection.</h1>
 
@@ -48,7 +48,7 @@ const Body = () => {
                 {
                     filteredRestaurantData.map((restaurant) => {
                         return (
-                            <Link className="restaurantMenuLink" to={`/restaurantMenu/${restaurant.info.id}`} key={restaurant.info.id}>
+                            <Link className="restaurantMenuLink" to={`/restaurants/${restaurant.info.id}`} key={restaurant.info.id}>
                                 {
                                     restaurant?.info?.avgRating > 4 ? <PromotedRestaurantCard restaurant={restaurant} key={restaurant.info.id} /> : <RestaurantCard restaurant={restaurant} key={restaurant.info.id} />
                                 }
