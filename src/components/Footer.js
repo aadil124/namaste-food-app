@@ -6,8 +6,7 @@ const Footer = () => {
         <div>Footer</div>
             <div>Footer</div>
             <div>Footer</div>
-            <div>Footer</div>
-            <div>Footer</div>
+
             <div>Footer</div>
         </>
 
