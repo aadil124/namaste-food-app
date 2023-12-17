@@ -25,11 +25,10 @@ const Body = () => {
     }
 
     const onlineStatus = useOnlineStatus()
-    // console.log(withPromotedCard())
-    // console.log(listOfRestaurantData)
+
 
     const PromotedRestaurantCard = withPromotedCard(RestaurantCard);
-    // console.log(PromotedRestaurantCard)
+
 
     if (onlineStatus === false) return <h1>Looks like you're offline!! Please check your internet connection.</h1>
 
