@@ -2,7 +2,7 @@
 import { CDN_URL } from "../utils/constant"
 const RestaurantCard = ({ restaurant }) => {
     const { name, areaName, avgRating, costForTwo, cuisines, sla, cloudinaryImageId } = restaurant?.info
-    // console.log(restaurant.info)
+
     return (
         <div className="m-2 p-3 rounded-md bg-gray-300 w-[270px] hover:bg-blue-100" >
             <div>
