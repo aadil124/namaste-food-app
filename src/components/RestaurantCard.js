@@ -32,7 +32,7 @@ export const withPromotedCard = (RestaurantCard) => {
         // console.log(props.restaurant.info)
         return (
             <>
-                <label className="absolute bg-red-500 p-2 m-2 rounded-md text-yellow-300 font-medium">Best Seller</label>
+                <label className="absolute bg-slate-500 p-2 m-2 rounded-md text-yellow-300 font-medium">Best Seller</label>
                 <RestaurantCard {...props} />
             </>
         )
