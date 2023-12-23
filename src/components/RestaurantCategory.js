@@ -2,9 +2,9 @@ import { useState } from "react";
 
 import ItemList from "./ItemList";
 const RestaurantCategory = ({ category }) => {
-  // console.log(category);
+  console.log(category);
   const ItemInfo = category?.card?.card?.itemCards;
-  // console.log("IIIII", ItemInfo);
+  console.log("IIIII", ItemInfo);
   const [showItem, setShowItem] = useState(false);
 
   const handleClick = () => {
