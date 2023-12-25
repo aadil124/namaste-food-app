@@ -46,6 +46,8 @@ const Body = () => {
 
   if (listOfRestaurantData?.length === null) return <ShimmerUI />;
 
+  // console.log(filteredRestaurantData);
+
   return (
     <div className="m-2 p-3 bg-gray-100">
       <div className="flex">
