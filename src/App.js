@@ -7,42 +7,49 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-
+import { Provider } from "react-redux";
+import appStore from "./redux/appStore";
+import CartList from "./components/CartList";
 
 const App = () => {
-    return (
-        <div className="App">
-            <Header />
-            <Outlet />
-        </div>
-    );
+  return (
+    <Provider store={appStore}>
+      <div className="App">
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
+  );
 };
 
 const appRoute = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
         path: "/",
-        element: <App />,
-        children: [
-            {
-                path: "/",
-                element: <Body />
-            },
-            {
-                path: "/about",
-                element: <About />
-            },
-            {
-                path: "/contact",
-                element: <Contact />
-            },
-            {
-                path: "/restaurants/:resId",
-                element: <RestaurantMenu />
-            },
-        ],
-        errorElement: <Error />
-    },
-
-])
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <CartList />,
+      },
+    ],
+    errorElement: <Error />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRoute} />);
