@@ -10,31 +10,43 @@ const Header = () => {
     // console.log(onlineStatus)
 
     return (
-        <div className="flex justify-between p-2 bg-blue-100">
+      <div className="flex justify-between p-2 bg-blue-100">
+        <Link to="/">
+          <img className="w-56 rounded-full" src={LOGO_URL} alt="logo" />
+        </Link>
 
-                <Link to="/">
-                <img
-                    className="w-56 rounded-full"
-                    src={LOGO_URL}
-                    alt="logo"
-                />
-                </Link>
-
-            <div className="flex items-center">
-                <ul className="flex m-2 px-3" >
-                    <li className="px-2 text-lg font-semibold">Online Status: {onlineStatus === true ? '✔' : '🛑'} </li>
-                    <li className="px-2 text-lg font-semibold" ><Link to="/">Home</Link></li>
-                    <li className="px-2 text-lg font-semibold"><Link to="/about">About</Link></li>
-                    <li className="px-2 text-lg font-semibold"><Link to="/contact">Contact us</Link></li>
-                    <li className="px-2 text-lg font-semibold">cart</li>
-
-                </ul>
-                <div className="px-2 text-lg font-semibold items-center">   <button className="rounded bg-gray-300 px-8 py-2" onClick={() => {
-                    btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
-                }}>{btnName}</button></div>
-
-            </div>
+        <div className="flex items-center">
+          <ul className="flex m-2 px-3">
+            <li className="px-2 text-lg font-semibold">
+              Online Status: {onlineStatus === true ? "✔" : "🛑"}{" "}
+            </li>
+            <li className="px-2 text-lg font-semibold">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="px-2 text-lg font-semibold">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="px-2 text-lg font-semibold">
+              <Link to="/contact">Contact us</Link>
+            </li>
+            <li className="px-2 font-semibold text-xl ">
+              <Link to="/cart">Cart - (0 items)</Link>
+            </li>
+          </ul>
+          <div className="px-2 text-lg font-bold items-center">
+            <button
+              className="rounded bg-gray-300 px-8 py-2"
+              onClick={() => {
+                btnName === "Login"
+                  ? setBtnName("Logout")
+                  : setBtnName("Login");
+              }}
+            >
+              {btnName}
+            </button>
+          </div>
         </div>
+      </div>
     );
 };
 
