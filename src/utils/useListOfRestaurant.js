@@ -13,7 +13,7 @@ const useListOfRestaurant = () => {
         const data = await fetch(LIST_RESTAURANT_URL)
         const response = await data.json()
         const restaurantCardData =
-          response?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+          response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
             ?.restaurants;
         console.log(response);
         setListOfRestaurantData(restaurantCardData)
