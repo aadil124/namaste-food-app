@@ -12,7 +12,7 @@ const Header = () => {
 
   // subscribing to store
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <div className="flex justify-between p-2 bg-blue-100">
