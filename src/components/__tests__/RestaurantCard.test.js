@@ -12,11 +12,11 @@ it("Should load the restaurant component with Restaurant card", () => {
   expect(textName).toBeInTheDocument();
 });
 
-// it("Should load the restaurant component with promoted label card", () => {
-//   const PromotedRestaurantCard = withPromotedCard(RestaurantCard);
-//   render(<PromotedRestaurantCard restaurant={MOCK_DATA} />);
+it("Should load the restaurant component with promoted label card", () => {
+  const PromotedRestaurantCard = withPromotedCard(RestaurantCard);
+  render(<PromotedRestaurantCard restaurant={MOCK_DATA} />);
 
-//   const textName2 = screen.getByText("Domino's Pizza");
+  const textName2 = screen.getByText("Domino's Pizza");
 
-//   expect(textName2).toBeInTheDocument();
-// });
+  expect(textName2).toBeInTheDocument();
+});
