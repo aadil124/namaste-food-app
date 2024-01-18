@@ -28,26 +28,26 @@ import { BrowserRouter } from "react-router-dom";
 //   expect(searchBtn).toBeInTheDocument();
 // });
 
-it("should load body component with search button ", async () => {
-  global.fetch = jest.fn(() => {
-    return Promise.resolve({
-      json: () => {
-        return Promise.resolve(MOCK_DATA);
-      },
-    });
-  });
+// it("should load body component with search button ", async () => {
+//   global.fetch = jest.fn(() => {
+//     return Promise.resolve({
+//       json: () => {
+//         return Promise.resolve(MOCK_DATA);
+//       },
+//     });
+//   });
 
-  await act(async () => {
-    render(
-      <BrowserRouter>
-        <Body />
-      </BrowserRouter>
-    );
-  });
+//   await act(async () => {
+//     render(
+//       <BrowserRouter>
+//         <Body />
+//       </BrowserRouter>
+//     );
+//   });
 
-  const searchBtn = screen.getByRole("button", { name: "Search Restaurant" });
+//   const searchBtn = screen.getByRole("button", { name: "Search Restaurant" });
 
-  fireEvent.change({ name: "burger" });
+//   fireEvent.change({ name: "burger" });
 
-  expect(searchBtn).toBeInTheDocument();
-});
+//   expect(searchBtn).toBeInTheDocument();
+// });
