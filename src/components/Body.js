@@ -14,7 +14,7 @@ const Body = () => {
     setListOfRestaurantData,
   } = useListOfRestaurant();
 
-  //   console.log("----", listOfRestaurantData);
+    console.log("----", listOfRestaurantData);
 
   const handleClick = () => {
     let filterCardData = listOfRestaurantData.filter((item) => {
