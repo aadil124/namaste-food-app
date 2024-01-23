@@ -14,7 +14,7 @@ const Body = () => {
     setListOfRestaurantData,
   } = useListOfRestaurant();
 
-    console.log("----", listOfRestaurantData);
+  // console.log("----", listOfRestaurantData);
 
   const handleClick = () => {
     let filterCardData = listOfRestaurantData.filter((item) => {
@@ -53,6 +53,7 @@ const Body = () => {
       <div className="flex">
         <div className="my-3">
           <input
+            data-testid="searchInput"
             className="bg-gray-200 mx-2 px-3 py-2 border border-solid border-black "
             type="text"
             placeholder="Search Here..."
