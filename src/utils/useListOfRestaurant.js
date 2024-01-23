@@ -9,15 +9,14 @@ const useListOfRestaurant = () => {
         fetchData();
     }, [])
     const fetchData = async () => {
-
-        const data = await fetch(LIST_RESTAURANT_URL)
-        const response = await data.json()
-        const restaurantCardData =
-          response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants;
-        console.log(response);
-        setListOfRestaurantData(restaurantCardData)
-        setFilteredRestaurantData(restaurantCardData)
+      const data = await fetch(LIST_RESTAURANT_URL);
+      const response = await data.json();
+      const restaurantCardData =
+        response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      // console.log(response);
+      setListOfRestaurantData(restaurantCardData);
+      setFilteredRestaurantData(restaurantCardData);
     }
 
     return {
