@@ -10,10 +10,13 @@ const RestaurantCard = ({ restaurant }) => {
     sla,
     cloudinaryImageId,
   } = restaurant?.info;
-  console.log(restaurant);
+  // console.log(restaurant);
 
   return (
-    <div className="m-2 p-3 rounded-md bg-gray-300 w-[270px] hover:bg-blue-100">
+    <div
+      data-testid="resCard"
+      className="m-2 p-3 rounded-md bg-gray-300 w-[270px] hover:bg-blue-100"
+    >
       <div>
         <img
           className="w-full h-52 rounded-lg"
