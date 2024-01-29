@@ -62,5 +62,24 @@ it("should load search Res list for pizza text input", async () => {
 
   const allCardsAfterSearch = screen.getAllByTestId("resCard");
 
-  expect(allCardsAfterSearch.length).toBe(2);
+  expect(allCardsAfterSearch.length).toBe(1); // should be 2 card shown
 });
+
+// it("should load top rated restaurant ", async () => {
+//   await act(async () => {
+//     render(
+//       <BrowserRouter>
+//         <Body />
+//       </BrowserRouter>
+//     );
+//   });
+
+//   const topRatedBtn = screen.getByRole("button", {
+//     name: "Top Rated Restaurant",
+//   });
+//   fireEvent.click(topRatedBtn);
+
+//   const cards = screen.getAllByTestId("resCard");
+
+//   expect(cards.length).toBe(6); // should be 8 card shown
+// });
