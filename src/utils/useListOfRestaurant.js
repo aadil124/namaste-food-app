@@ -14,7 +14,7 @@ const useListOfRestaurant = () => {
       const restaurantCardData =
         response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
-      // console.log(response);
+      console.log(response);
       setListOfRestaurantData(restaurantCardData);
       setFilteredRestaurantData(restaurantCardData);
     }
